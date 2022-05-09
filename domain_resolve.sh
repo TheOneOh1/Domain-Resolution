@@ -22,7 +22,7 @@ function valid_domain(){
 function help(){
 	printf "\tSub Domain Enum\t\n"
 	printf -- "-d\t:\tDomain as target [domain.tld]\n"
-	# -- : Used to ignore "-" in printf
+
 	printf -- "-f:\t:\tWordlist\n"
 }
 function main(){
@@ -32,7 +32,7 @@ function main(){
         fi
 	done < $wordlist
 }
-# bash script.sh -d tesla.com -f wordlist.txt\
+
 while [ 2 -le $# ];do
 	case "$1" in
 		"-d")
@@ -45,9 +45,9 @@ while [ 2 -le $# ];do
 			break
 			;;
 		"-h"|"--help")
-				help
-				exit 0
-				;;
+			help
+			exit 0
+			;;
 		"")
 			printf "One argument required. Use \"-h/--help\"\n"
 			help
